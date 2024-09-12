@@ -15,7 +15,8 @@ def lambda_handler(event, context):
             "name": pokemon_data["name"],
             "height": pokemon_data["height"],
             "weight": pokemon_data["weight"],
-            "abilities": [ability["ability"]["name"] for ability in pokemon_data["abilities"]]
+            "abilities": [ability["ability"]["name"] for ability in pokemon_data["abilities"]],
+            "types": [ptype["type"]["name"] for ptype in pokemon_data["types"]]
         }
         
         return {
