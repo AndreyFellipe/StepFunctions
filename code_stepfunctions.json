@@ -1,0 +1,12 @@
+{
+  "Comment": "Consulta de Pokémon na PokeAPI via Lambda",
+  "StartAt": "ConsultaPokemon",
+  "States": {
+    "ConsultaPokemon": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:<Região>:<ID da Conta>:function:<nomedaFunção>",
+      "ResultPath": "$.pokemon_data",
+      "End": true
+    }
+  }
+}
